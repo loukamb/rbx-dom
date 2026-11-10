@@ -6,6 +6,7 @@ members = [
 	"rbx_reflector",
 	"rbx_reflection",
 	"rbx_reflection_database",
+	"rbx_reflection_gen",
 	"rbx_types",
 	"rbx_xml",
 	"rbx_util",

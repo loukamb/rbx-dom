@@ -22,6 +22,16 @@ pub struct PatchSources {
 }
 
 impl PatchSources {
+    /// Patch files already in memory, e.g. embedded in a binary: `(name, YAML contents)`.
+    pub fn from_contents(files: impl IntoIterator<Item = (PathBuf, String)>) -> Self {
+        Self {
+            files: files
+                .into_iter()
+                .map(|(path, contents)| PatchSource { path, contents })
+                .collect(),
+        }
+    }
+
     pub fn load(dir: &Path) -> anyhow::Result<Self> {
         let mut files = Vec::new();
 

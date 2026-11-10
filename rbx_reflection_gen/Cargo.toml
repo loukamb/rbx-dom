@@ -1,0 +1,17 @@
+[package]
+name = "rbx_reflection_gen"
+description = "Builds an rbx-dom reflection database from a Roblox Studio API dump (Isu fork)"
+version = "0.1.0"
+license = "MIT"
+edition = "2021"
+publish = false
+
+[dependencies]
+rbx_reflection = { path = "../rbx_reflection" }
+rbx_types = { path = "../rbx_types", features = ["serde"] }
+
+anyhow = "1.0.57"
+log = "0.4.17"
+serde = { version = "1.0.136", features = ["derive"] }
+serde_json = "1.0.79"
+yaml_serde = "0.10.4"

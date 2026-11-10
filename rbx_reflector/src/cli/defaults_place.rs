@@ -17,7 +17,7 @@ use serde::Deserialize;
 use tempfile::tempdir;
 use tiny_http::Response;
 
-use crate::api_dump::Dump;
+use rbx_reflection_gen::api_dump::Dump;
 
 static PLUGIN_SOURCE: &str = include_str!("../../plugin.lua");
 
